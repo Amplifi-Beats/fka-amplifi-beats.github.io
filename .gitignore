@@ -7,3 +7,4 @@ node_modules/
 *.log
 frontend/dist/
 studio/dist/
+studio-portfolio/
