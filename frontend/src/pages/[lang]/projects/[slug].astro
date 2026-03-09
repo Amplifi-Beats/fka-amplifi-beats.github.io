@@ -128,7 +128,9 @@ const galleryHtml = (project.imageUrls || [])
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 
-  img {
+  .gallery :global(img) {
+    display: block;
+    max-width: 100%;
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
