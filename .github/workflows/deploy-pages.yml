@@ -32,6 +32,10 @@ jobs:
         run: npm ci
 
       - name: Build frontend
+        env:
+          PUBLIC_SANITY_PROJECT_ID: ${{ vars.PUBLIC_SANITY_PROJECT_ID || '2g5cwfuz' }}
+          PUBLIC_SANITY_DATASET: ${{ vars.PUBLIC_SANITY_DATASET || 'production' }}
+          PUBLIC_SANITY_API_VERSION: ${{ vars.PUBLIC_SANITY_API_VERSION || '2026-03-08' }}
         run: npm --workspace frontend run build
 
       - name: Setup Pages
